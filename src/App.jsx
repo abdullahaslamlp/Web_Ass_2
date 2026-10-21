@@ -7,15 +7,9 @@ import HomePage from './pages/HomePage';
 import EventsPage from './pages/EventsPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import EventDetailsPage from './pages/EventDetailsPage';
 
 // Placeholder views for subsequent parts
-const EventDetailsPlaceholder = () => (
-  <div style={{ padding: '2rem 0' }}>
-    <h2>Event Details</h2>
-    <p style={{ color: 'var(--text-muted)' }}>Detailed event view & registration initializing in next phase.</p>
-  </div>
-);
-
 const MyEventsPlaceholder = () => (
   <div style={{ padding: '2rem 0' }}>
     <h2>My Registered Events</h2>
@@ -39,7 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/events/:id" element={<EventDetailsPlaceholder />} />
+          <Route path="/events/:id" element={<EventDetailsPage />} />
           <Route
             path="/my-events"
             element={
