@@ -9,14 +9,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import EventDetailsPage from './pages/EventDetailsPage';
 import MyEventsPage from './pages/MyEventsPage';
-
-const NotFoundPlaceholder = () => (
-  <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
-    <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '0.5rem' }}>404 - Page Not Found</h2>
-    <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>The page you requested does not exist.</p>
-    <a href="/" className="btn btn-primary">Back to Home</a>
-  </div>
-);
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -37,7 +30,7 @@ function App() {
           />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="*" element={<NotFoundPlaceholder />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
