@@ -3,33 +3,16 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import ProtectedRoute from './components/common/ProtectedRoute';
+import HomePage from './pages/HomePage';
+import EventsPage from './pages/EventsPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 
 // Placeholder views for subsequent parts
-const HomePlaceholder = () => (
-  <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
-    <h1 style={{ fontSize: '2.25rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '1rem' }}>
-      Welcome to EventHub
-    </h1>
-    <p style={{ color: 'var(--text-muted)', maxWidth: '540px', margin: '0 auto 2rem' }}>
-      Discover, explore, and register for premier concerts, sporting events, theatre, and arts.
-    </p>
-    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-      <a href="/events" className="btn btn-primary">
-        Explore Events
-      </a>
-      <a href="/register" className="btn btn-outline">
-        Create Account
-      </a>
-    </div>
-  </div>
-);
-
-const EventsPlaceholder = () => (
+const EventDetailsPlaceholder = () => (
   <div style={{ padding: '2rem 0' }}>
-    <h2>Events Explorer</h2>
-    <p style={{ color: 'var(--text-muted)' }}>Ticketmaster API integration initializing in next phase.</p>
+    <h2>Event Details</h2>
+    <p style={{ color: 'var(--text-muted)' }}>Detailed event view & registration initializing in next phase.</p>
   </div>
 );
 
@@ -54,9 +37,9 @@ function App() {
       <Navbar />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<HomePlaceholder />} />
-          <Route path="/events" element={<EventsPlaceholder />} />
-          <Route path="/events/:id" element={<EventsPlaceholder />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/:id" element={<EventDetailsPlaceholder />} />
           <Route
             path="/my-events"
             element={
