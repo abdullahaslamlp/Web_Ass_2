@@ -8,14 +8,7 @@ import EventsPage from './pages/EventsPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import EventDetailsPage from './pages/EventDetailsPage';
-
-// Placeholder views for subsequent parts
-const MyEventsPlaceholder = () => (
-  <div style={{ padding: '2rem 0' }}>
-    <h2>My Registered Events</h2>
-    <p style={{ color: 'var(--text-muted)' }}>Registration dashboard initializing in upcoming phase.</p>
-  </div>
-);
+import MyEventsPage from './pages/MyEventsPage';
 
 const NotFoundPlaceholder = () => (
   <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
@@ -38,7 +31,7 @@ function App() {
             path="/my-events"
             element={
               <ProtectedRoute>
-                <MyEventsPlaceholder />
+                <MyEventsPage />
               </ProtectedRoute>
             }
           />
